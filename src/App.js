@@ -1,25 +1,17 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-
+import Person from './components/person/Person'
 class App extends Component {
+  state = {
+    persons : ['Naruto Uzumaki','monkey D. luffy','GOn friesses']
+  }
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Person name='naruto Uzumaki'><h4>Anime -Naruto</h4></Person>
+        <Person name='monkey D. luffy'><h4>Anime -One Piece</h4></Person>
+        <Person name='Gon friesses'><h4>Anime -Hunter X Hunter</h4></Person>
       </div>
     );
   }
